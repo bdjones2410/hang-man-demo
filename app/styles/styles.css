@@ -1,0 +1,16 @@
+#answer-letters {
+  font-size: 32px;
+}
+
+.answer-letter-spot {
+  margin: 0 5px;
+}
+
+.guess-button {
+  padding: 10px;
+  margin: 10px;
+  font-size: 16px;
+  &::hover {
+    cursor: pointer;
+  }
+}
