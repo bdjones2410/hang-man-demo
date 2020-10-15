@@ -1,12 +1,33 @@
+#playing-field-container {
+  max-width: 50%;
+  margin: 0 auto;
+}
+
 #answer-letters {
-  font-size: 32px;
+  font-size: 100px;
+  text-align: center;
+}
+
+#strike-box-container {
+  color: red;
+  font-size: 26px;
+  border-bottom: 3px solid red;
 }
 
 .answer-letter-spot {
   margin: 0 5px;
 }
 
-.guess-button {
+#answer-input-container {
+  border: 1px solid black;
+  padding: 10px 30px;
+}
+
+#answer-input-container p {
+  font-size: 26px;
+}
+
+#answer-input-container .guess-button {
   padding: 10px;
   margin: 10px;
   font-size: 16px;

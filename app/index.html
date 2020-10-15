@@ -8,17 +8,20 @@
 </head>
 <body>
   <div id="playing-field">
-    <!-- individual letter for the answer -->
-    <h2 id="answer-letters">
-    </h2>
+    <div id="playing-field-container">
+      <!-- Counter of incorrect guesses-->
+      <div id="strike-box-container">
+        <span>Strikes</span>: <span id="strike-box">0</span> / <span id="max-guess"></span>
+      </div>
+
+      <!-- individual letter for the answer -->
+      <h2 id="answer-letters">
+      </h2>
     
-    <!-- Counter of incorrect guesses-->
-    <div id="strike-box">
-      0
-    </div>
-   
-    <!-- Alphabet keys for guessing -->
-    <div id="answer-input-container">
+      <!-- Alphabet keys for guessing -->
+      <div id="answer-input-container">
+        <p>Guess a letter</p>
+      </div>
     </div>
   </div>
   <script src="./scripts/hangman.js">

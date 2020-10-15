@@ -3,6 +3,8 @@ const tempAnswers = [
   'random',
   'words',
   'here',
+  'llama',
+  'disestablishment'
 ];
 
 const GUESS_BUTTON_CLASS_NAME = 'guess-button';
@@ -10,6 +12,7 @@ const MAX_STRIKES = 6;
 const LETTER_SPOTS = [];
 const strikeBox = document.getElementById('strike-box');
 const guessContainer = document.getElementById('answer-input-container');
+const maxGuessContainer = document.getElementById('max-guess');
 const ANSWER_WORD = setAnswer();
 
 let correctGuesses = 0;
@@ -22,7 +25,7 @@ function setAnswer() {
 
 function initializeGame() {
   const container = document.getElementById('answer-letters');
-
+  maxGuessContainer.innerHTML = MAX_STRIKES;
   ANSWER_WORD.forEach(() => {
     const newSpan = document.createElement('span');
     newSpan.className = 'answer-letter-spot';
@@ -76,15 +79,11 @@ function checkAnswer(guess) {
     totalStrikes++;
     strikeBox.innerHTML = totalStrikes;
     if (totalStrikes >= MAX_STRIKES) {
-      endGame('Game Over - Better Luck Next Time');
+      endGame(`Game Over - The word was <strong>'${ANSWER_WORD.join('')}'</strong>`);
     }
   } else if(correctGuesses === ANSWER_WORD.length) {
     endGame('YOU WIN!');
   }
-}
-
-function setWarning(guess) {
-
 }
 
 function endGame(endGameMessage) {
